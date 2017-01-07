@@ -1,0 +1,18 @@
+<?php foreach ($noticias->items as $item) : ?>
+    <div class="row"> 
+        <div class="col-sm-4 col-xs-12">
+           <img src="<?php echo $item->imagen ?>" alt="imagen del blog", class="img-rounded imagenblog">
+        </div>
+        <div class="col-sm-8 col-xs-12">
+            <h4 class="text-center"><?php echo $item->titulo ?></h4>
+            <p><?php echo $item->contenido ?></p>
+        </div>
+    </div>
+    <br>
+<?php endforeach; ?>
+<div class="row">
+    <div class="col-xs-12">
+    <?php View :: partial ( 'paginador' , false , array ( 'page' => $noticias ,'show' => 5 , 'url' => 'inicio/blog' )) ?>
+    </div>
+</div>
+        

@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-xs-12 col-sm-6">
+	<?php View::content() ?>
+		<h4 class="text-center">Registrar usuarios del sistema</h4>
+		<?php echo Form::open() ?>
+		<div class="form-group">
+		<label>Nombre</label>
+			<?php echo Form::text('nombre', 'class="form-control" placeholder="Eduardo"') ?>
+		<label>Correo</label>
+			<?php echo Form::text('correo', 'class="form-control" placeholder="ejemplo@gmail.com"') ?>
+		<label>Clave</label>
+			<?php echo Form::pass('clave', 'class="form-control" placeholder="*******"') ?>
+			<br/>
+			<?php echo Form::submit('Registrar cliente en el sistema', 'class="btn btn-primary form-control"') ?>
+		</div>
+		<?php echo Form::close() ?>
+	</div>
+	<div class="col-sm-3"></div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<h3>Módulo de gestor de noticias</h3>
+		<div class="table-responsive">
+        <table class="table table-bordered">
+            <tr><th>Titulo</th><th>Contenido</th><th>Editar</th><th>Borrar</th></tr>
+            <?php foreach ($noticias->items as $item) : ?>
+                    <tr>
+                        <td><?php echo $item->titulo ?></td>
+                        <td><?php echo $item->contenido ?></td>
+                        <td><?php echo Html::linkAction("editar/$item->id", 'Editar') ?></td>
+                        <td><?php echo Html::linkAction("borrar/$item->id", 'Borrar') ?></td>
+                    </tr>
+            <?php endforeach; ?>
+        </table>
+        </div>
+         <?php echo Html::link('noticias/nuevo', 'Crear noticia', 'class= "btn btn-primary"') ?>
+        <?php echo Html::link('administrador/inicio', 'Ir al inicio', 'class= "btn btn-success"') ?>
+        <?php View :: partial ( 'paginador' , false , array ( 'page' => $noticias ,'show' => 5 , 'url' => 'noticias' )) ?>
+	</div>
+	<div class="col-md-3"></div>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <title>Yickson en su rincón</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?php Tag::css('yoda') ?>
+  <?php Tag::css('estilo') ?>
+  <?= Html::includeCss() ?>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand" >Yickson en su rincón</a>    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><?php echo Html::link('inicio/yickson', 'Acerca de mí') ?></li>
+        <li><?php echo Html::link('inicio/blog', 'Noticias') ?></li>
+        <li><?php echo Html::link('inicio/contacto', 'Contacto') ?></li>
+        <li><?php //Html::link('inicio/yickson') ?></li>
+        <li><?php //Html::link('inicio/yickson') ?></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <?php View::content() ?>
+  <?php View::partial('kumbia/footer') ?>
+</div>
+  <?php echo Tag::js('jquery') ?>
+  <?php echo Tag::js('bootstrap') ?>
+</body>
+</html>
